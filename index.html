@@ -1,11 +1,11 @@
 <html lang="fr"><head>
   <meta charset="UTF-8">
-  <title>Team TSUKO</title>
+  <title>Team KATAKTIS</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="favicon.png" type="image/png">
   <style>
     :root {
-      --team-color: #6C42B0;
+      --team-color: #FF0000;
       --bg-color: #1a1a1a;
       --text-color: #f5f5f5;
       --card-bg: #2a2a2a;
@@ -87,7 +87,6 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 20px;
-      padding: 10px;
     }
 
     .card {
@@ -184,16 +183,15 @@
     #fil-actus {
       position: relative;
       width: 100%;
-      max-width: 60000px;
+      max-width: 1200px;
       margin: 40px auto;
-      height: 100%;
-max-height: 600px;
+      height: 500px;
       background-color: #2a2a2a;
       border-radius: 16px;
       overflow: hidden;
       display: flex;
-
-
+      align-items: center;
+      justify-content: center;
     }
 
     .slide-actu {
@@ -281,7 +279,7 @@ max-height: 600px;
 
   <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
   <script>
-    (function(){ emailjs.init("Contact TSUKO"); })();
+    (function(){ emailjs.init("Contact KATAKTIS"); })();
 
     document.addEventListener('DOMContentLoaded', () => {
       showPage(location.hash || '#accueil');
@@ -304,79 +302,6 @@ max-height: 600px;
       if(section) section.classList.add('active');
     }
 
-.hero {
-  height: 100vh;
-  background: url('banniere.jpg') center/cover no-repeat;
-  position: relative;
-  color: white;
-  text-align: center;
-  transition: height 1s ease;
-}
-
-.hero::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background-color: rgba(0, 0, 0, 0.6);
-}
-
-.hero-content {
-  position: relative;
-  z-index: 1;
-  padding: 100px 20px 80px;
-  transition: transform 1s ease, opacity 1s ease;
-}
-
-.hero.shrink {
-  height: 200px;
-}
-
-.hero.shrink .hero-content {
-  transform: translateY(-30px);
-  opacity: 0.8;
-}
-
-.slider {
-  position: relative;
-  width: 100%;
-  max-width: 800px;
-  height: 300px;
-  margin: 0 auto;
-  overflow: hidden;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-}
-
-.slide {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  transition: opacity 1s ease;
-}
-
-.slide.active {
-  opacity: 1;
-  z-index: 1;
-}
-
-.slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.caption {
-  position: absolute;
-  bottom: 15px;
-  left: 20px;
-  background-color: rgba(0,0,0,0.6);
-  color: #fff;
-  padding: 8px 15px;
-  border-radius: 5px;
-  font-size: 1rem;
-}
-
 
     window.addEventListener('hashchange', () => showPage(location.hash||'#accueil'));
   </script>
@@ -385,20 +310,97 @@ max-height: 600px;
 
 <header>
   <div class="logo-container">
-    <img src="logo.png" alt="Logo TSUKO">
-    <h2>TSUKO ESPORT</h2>
+    <img src="logo.png" alt="Logo Kataktis">
+    <h1>Team KATAKTIS</h1>
   </div>
   <nav>
     <a href="#accueil">Accueil</a>
     <a href="#reseaux">Réseaux</a>
     <a href="#joueurs">Fortnite</a>
-<!--     <a href="#tournois">Tournois</a> -->
+    <a href="#rocket_league">Rocket League</a>
+    <a href="#brawl_stars">Brawl Stars</a>
+    <a href="#tournois">Tournois</a>
     <a href="#effectif">Effectif</a>
-    <a href="#boutique">Boutique</a>
-<!--      <a href="#recrutement">Recrutement</a> -->
+    <a href="#recrutement">Recrutement</a>
 
   </nav>
 </header>
+
+
+
+
+
+
+
+
+<!-- Rocket League -->
+
+<section id="rocket_league" class="section active" style="padding: 0; margin: 0;">
+  <!-- Bannière -->
+  <div id="banniere-rl" style="
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+  ">
+    <img src="banniererl.jpg" alt="Accueil" style="
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      z-index: -1;
+    ">
+    <div style="
+      backdrop-filter: blur(8px);
+      background-color: rgba(0, 0, 0, 0.4);
+      border-radius: 16px;
+      padding: 30px 40px;
+      max-width: 50%;
+      width: 90%;
+      text-align: center;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+    ">
+      <h1 style="font-size: 2.5rem; color: white; margin-bottom: 10px;">ROCKET LEAGUE</h1>
+      <p style="font-size: 1.5rem; color: white;">Nouveau pole en création !</p>
+    </div>
+  </div>
+  <h2>Nos Joueurs</h2>
+  <div class="grid">
+    <a href="résaux joueur ----" target="_blank" class="card">
+      <img src="rl1.png" alt="Instagram" style="max-width:300px; width:100%; height:auto;">
+      <h4 style="color:white;">K2</h4>
+      <p style="color:white;"></p>
+    </a>
+    <a href="résaux joueur ----" target="_blank" class="card">
+      <img src="rl1.png" alt="X/Twitter" style="max-width:300px; width:100%; height:auto;">
+      <h4 style="color:white;">Neroo</h4>
+      <p style="color:white;"></p>
+    </a>
+    <a href="résaux joueur ----" target="_blank" class="card">
+      <img src="rl1.png" alt="Twitch" style="max-width:300px; width:100%; height:auto;">
+      <h4 style="color:white;">soon ...</h4>
+      <p style="color:white;"></p>
+    </a>
+
+  </div>
+
+</section>
+
+
+
+
+
+
+
+
 
 
 
@@ -440,56 +442,84 @@ max-height: 600px;
       box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
       z-index: 1;
     ">
-      <h1 style="font-size: 2.5rem; color: white; margin-bottom: 10px;">Bienvenue chez TSUKO ESPORT</h1>
+      <h1 style="font-size: 2.5rem; color: white; margin-bottom: 10px;">Bienvenue chez Team KATAKTIS</h1>
       <p style="font-size: 1.5rem; color: white;">Team e-sport compétitive &amp; créative. Rejoins l'élite !</p>
     </div>
   </div>
 
   <!-- Fil d'actualité -->
-<section id="actus" class="section">
-  <h2>Actualités</h2>
-  <div class="slider">
-    <div class="slide active">
+  <section id="fil-actus" style="margin: 1">
+
+
+    <div class="slide-actu">
       <img src="actu1.jpg" alt="Actu 1">
-      <div class="caption">🔥 VAYNE CUP en Août !</div>
+      <div class="actu-texte">📢 Kataktis X XEOS CUP arrive le 27 !</div>
     </div>
-    <div class="slide">
+
+    <div class="slide-actu active">
       <img src="actu2.jpg" alt="Actu 2">
-      <div class="caption">🎉 Nouveau maillot dispo !</div>
+      <div class="actu-texte">🔥Rocket league !</div>
     </div>
-  </div>
-</section>
+
+    <div class="slide-actu">
+      <img src="actu3.jpg" alt="Actu 1">
+      <div class="actu-texte">📢 Maillot diponible sur YOKO</div>
+    </div>
+
+
+  </section>
+
 
 
   <div class="grid-navigation" style="justify-items:center; text-align:center;">
     <a href="#joueurs" class="nav-card">
       <img src="joueurs.jpg" alt="Fortnite">
       <div class="nav-info">
-        <h3>Nos Joueurs</h3>
-        <p>Rencontre les talents de la Team TSUKO.</p>
+        <h3>Fortnite</h3>
+        <p>Rencontre les talents de la Team Kataktis.</p>
+      </div>
+    </a>
+
+
+
+    <a href="#rocket_league" class="nav-card">
+      <img src="rocket_league.jpg" alt="rocket_league">
+      <div class="nav-info">
+        <h3>Rocket League</h3>
+        <p style="color:white;">Part avec nous dans l'univers de Rocket League</p>
+      </div>
+    </a>
+
+
+
+    <a href="#brawl_stars" class="nav-card">
+      <img src="brawl_stars.jpg" alt="brawl_stars">
+      <div class="nav-info">
+        <h3>Brawl Stars</h3>
+        <p style="color:white;"> Forgés dans l'ombre, prêt à marquer la scène </p>
       </div>
     </a>
 
 
 
 
-<!--    <a href="#tournois" class="nav-card">  -->
-<!--      <img src="tournois.jpg" alt="Tournois"> -->
-<!--      <div class="nav-info"> -->
-<!--        <h3>Tournois</h3> -->
-<!--        <p>Nos compétitions à venir et passées.</p> -->
-<!--      </div> -->
-<!--    </a> -->
+    <a href="#tournois" class="nav-card">
+      <img src="tournois.jpg" alt="Tournois">
+      <div class="nav-info">
+        <h3>Tournois</h3>
+        <p>Nos compétitions à venir et passées.</p>
+      </div>
+    </a>
 
 
 
-<!--     <a href="#recrutement" class="nav-card"> -->
-<!--       <img src="recrutement.jpg" alt="Recrutement"> -->
-<!--       <div class="nav-info"> -->
-<!--         <h3>Recrutement</h3> -->
-<!--         <p>Tu veux nous rejoindre ? C'est par ici !</p> -->
-<!--       </div> -->
-<!--     </a> -->
+    <a href="#recrutement" class="nav-card">
+      <img src="recrutement.jpg" alt="Recrutement">
+      <div class="nav-info">
+        <h3>Recrutement</h3>
+        <p>Tu veux nous rejoindre ? C'est par ici !</p>
+      </div>
+    </a>
 
 
 
@@ -529,90 +559,6 @@ max-height: 600px;
 
 
 
-<section id="joueurs" class="section">
-  <h2>Nos Joueurs eSport</h2>
-  <div class="grid">
-    <div class="card">
-      <img src="vigran.png" alt="VIGRAN" style="width:100%; border-radius:8px;">
-      <h4>TSK VIGRAN</h4>
-      <p>20200 PR, Div 1, 500$</p>
-    </div>
-
-
-    <div class="card">
-      <img src="kubison.png" alt="KUBISON" style="width:100%; border-radius:8px;">
-      <h4>TSK KUBISON</h4>
-      <p>20000 PR, Div 1, 500$</p>
-    </div>
-
-    <div class="card">
-      <img src="tenq.png" alt="Tenq" style="width:100%; border-radius:8px;">
-      <h4>TSK Tenq</h4>
-      <p>15100 PR, Div 1, 600$</p>
-    </div>
-
-
-
-  </div>
-
-
-  <div class="grid">
-
-    <div class="card">
-      <img src="chommikus.png" alt="CHOMMIKUS" style="width:100%; border-radius:8px;">
-      <h4>TSK CHOMMIKUS</h4>
-      <p>9600 PR, Div 2, 300$</p>
-    </div>
-
-    <div class="card">
-      <img src="keza.png" alt="keza" style="width:100%; border-radius:8px;">
-      <h4>TSK Keza</h4>
-      <p>3100 PR, Div 5, 200$</p>
-    </div>
-
-    <div class="card">
-      <img src="joueur.png" alt="joueur 6" style="width:100%; border-radius:8px;">
-      <h4>Joueur Esport officiel</h4>
-      <p>Tsuko eSport</p>
-    </div>
-
-  </div>
-
-  </div>
-
-
-  <h2>Nos Joueurs CDF</h2>
-  <div class="grid">
-
-
-    <div class="card">
-      <img src="Nephast.png" alt="Nephast" style="width:100%; border-radius:8px;">
-      <h4>TSK Nephast</h4>
-      <p>505 PR, Div 5</p>
-    </div>
-
-
-    <div class="card">
-      <img src="mµñツ.png" alt="mµñツ" style="width:100%; border-radius:8px;">
-      <h4>TSK mµñツ</h4>
-      <p>500 PR, Div 4</p>
-    </div>
-
-
-    <div class="card">
-      <img src="Wrk4k.png" alt="Wrk4k" style="width:100%; border-radius:8px;">
-      <h4>TSK Wrk4k - 19 ans</h4>
-      <p>231 PR, Div 5 (Div 2 : MO), 100$</p>
-    </div>
-
-  </div>
- 
- 
-
-</section>
-
-
-
 
 <!-- Joueurs -->
 
@@ -622,155 +568,72 @@ max-height: 600px;
     <h3>🏆 Joueurs Officiels</h3>
     <ul>
 
-      <li style="color:white;">
-        <a href="https://x.com/haxofn_?s=11" target="_blank">
-        <img src="fr10.png" alt="Joueur 4" style="height:auto; width:100%;">
-        <p></p>
-        </a>
-      </li>
+  <div class="grid-navigation" style="justify-items:center; text-align:center;">
 
-      <li style="color:white;">
-        <a href="https://x.com/mlody_74?s=11" target="_blank">
-        <img src="fr1.png" alt="Joueur 1" style="height:auto; width:100%;">
-        </a>
-        <p></p>
-      </li>
-
-
-      <li style="color:white;">
-        <a href="https://x.com/erxk23" target="_blank">
-        <img src="fr2.png" alt="Joueur 2" style="height:auto; width:100%;">
-        </a>
-        <p></p>
-      </li>
-
-
-      <li style="color:white;">
-        <a href="https://x.com/shinftne?s=21" target="_blank">
-        <img src="fr3.png" alt="Joueur 3" style="height:auto; width:100%;">
-        </a>
-        <p></p>
-      </li>
+    <a href="#haxo" class="nav-card">
+      <img src="haxo1.png" alt="haxo">
+      <div class="nav-info">
+        <h3>Haxo</h3>
+      </div>
+    </a>
 
 
 
+    <a href="#mlody" class="nav-card">
+      <img src="mlody1.png" alt="mlody">
+      <div class="nav-info">
+        <h3>Mlody</h3>
+      </div>
+    </a>
 
 
-<!-- <li style="color:white;"> -->
-
-<!-- <a href="https://x.com/novax7q" target="_blank"> -->
-
-<!-- <img src="fr11.png" alt="Joueur 5" style="height:auto; width:100%;"> -->
-
-<!-- <p></p> -->
-
-<!-- </a> -->
-
-<!-- </li> -->
+    <a href="#erkx" class="nav-card">
+      <img src="erkx1.png" alt="Recrutement">
+      <div class="nav-info">
+        <h3>Erkx</h3>
+      </div>
+    </a>
 
 
-
+    <a href="#shin" class="nav-card">
+      <img src="shin1.png" alt="Shin">
+      <div class="nav-info">
+        <h3>Shin</h3>
+      </div>
+    </a>
+ </div>
 
 <h3>🏆 Joueurs Academique</h3>
     <ul>
 
+  <div class="grid-navigation" style="justify-items:center; text-align:center;">
 
-      <li style="color:white;">
-        <a href="https://x.com/yayaZFN" target="_blank">
-        <img src="fr6.png" alt="Joueur 7" style="height:auto; width:100%;">
-        </a>
-        <p></p>
-      </li>
-
-
-      <li style="color:white;">
-        <a href="https://x.com/nerzox35?" target="_blank">
-        <img src="fr4.png" alt="Joueur 6" style="height:auto; width:100%;">
-        <p></p>
-      </li>
+    <a href="#yayaz" class="nav-card">
+      <img src="yayaz1.png" alt="mlody">
+      <div class="nav-info">
+        <h3>Yayaz</h3>
+      </div>
+    </a>
 
 
-      <li style="color:white;">
-        <a href="https://x.com/@Sinuzgraph" target="_blank">
-        <img src="fr8.png" alt="Joueur 9" style="height:auto; width:100%;">
-        </a>
-        <p></p>
-      </li>
+    <a href="#nerzox" class="nav-card">
+      <img src="nerzox1.png" alt="Recrutement">
+      <div class="nav-info">
+        <h3>Nerzox</h3>
+      </div>
+    </a>
 
 
-
-<!-- <li style="color:white;"> -->
-
-<!-- <a href="https://x.com/tsukofnbr?s=21" target="_blank"> -->
-
-<!-- <img src="fr6.png" alt="Joueur 8" style="height:auto; width:100%;"> -->
-
-<!-- <p></p> -->
-
-<!-- </a> -->
-
-<!-- </li> -->
-
-      
-<!-- <li style="color:white;"> -->
-
-<!-- <a href="https://x.com/Rodrxz77" target="_blank"> -->
-
-<!-- <img src="fr12.png" alt="Joueur 11" style="height:auto; width:100%;"> -->
-
-<!-- <p></p> -->
-
-<!-- </a> -->
-
-<!-- </li> -->        
+    <a href="#moyalys" class="nav-card">
+      <img src="moyalys1.png" alt="Recrutement">
+      <div class="nav-info">
+        <h3>Moyalys</h3>
+      </div>
+    </a>
+ </div>
 
 
     </ul>
-
-
-<!-- <h3>🏆 Joueurs Espoirs</h3> -->
-<!-- <ul> -->
-
-
-
-<!-- <li style="color:white;"> -->
-
-<!-- <a href="https://www.twitch.tv/siinuz" target="_blank"> -->
-
-<!-- <img src="fr8.png" alt="Joueur 8" style="height:auto; width:100%;"> -->
-
-<!-- <p></p> -->
-
-<!-- </a> -->
-
-<!-- </li> -->
-
-
-
-<!-- <li style="color:white;"> -->
-
-<!-- <a href="https://www.twitch.tv/nysrix" target="_blank"> -->
-
-<!-- <img src="fr9.png" alt="Joueur 8" style="height:auto; width:100%;"> -->
-
-<!-- <p></p> -->
-
-<!-- </a> -->
-
-<!-- </li> -->
-
-
-<!-- <li style="color:white;"> -->
-
-<!-- <a href="https://x.com/SirjayV2/status/1959603760772026773" target="_blank"> -->
-
-<!-- <img src="fr7.png" alt="Joueur 8" style="height:auto; width:100%;"> -->
-
-<!-- <p></p> -->
-
-<!-- </a> -->
-
-<!-- </li> -->
 
 
 </ul>
@@ -783,34 +646,336 @@ max-height: 600px;
 
 
 
+
+
+<!-- Page pour chaque Joueurs -->
+
+<!-- haxo -->
+
+<section id="haxo" class="section">
+  <h2>Haxo</h2>
+  <div class="category">
+    <ul>
+
+
+      <li style="color:white;">
+        <a href="https://x.com/haxofn_?s=11" target="_blank">
+        <img src="fr10.png" alt="haxo" style="height:auto; width:100%;">
+        </a>
+        <p></p>
+      </li>
+
+</ul>
+
+  </div>
+</section>
+
+
+
+
+
+
+
+
+<!-- mlody -->
+
+<section id="mlody" class="section">
+  <h2>Mlody</h2>
+  <div class="category">
+    <ul>
+
+
+      <li style="color:white;">
+        <a href="https://x.com/mlody_74?s=11" target="_blank">
+        <img src="fr1.png" alt="mlody" style="height:auto; width:100%;">
+        </a>
+        <p></p>
+      </li>
+
+</ul>
+
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+<!-- erkx -->
+
+<section id="erkx" class="section">
+  <h2>Erkx</h2>
+  <div class="category">
+    <ul>
+
+
+      <li style="color:white;">
+        <a href="https://x.com/erxk23" target="_blank">
+        <img src="fr2.png" alt="erkx" style="height:auto; width:100%;">
+        </a>
+        <p></p>
+      </li>
+
+</ul>
+
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+<!-- shin -->
+
+<section id="shin" class="section">
+  <h2>Shin</h2>
+  <div class="category">
+    <ul>
+
+
+      <li style="color:white;">
+        <a href="https://x.com/shinftne?s=21" target="_blank">
+        <img src="fr3.png" alt="shin" style="height:auto; width:100%;">
+        </a>
+        <p></p>
+      </li>
+
+</ul>
+
+  </div>
+</section>
+
+
+
+
+
+
+
+
+<!-- yayaz -->
+
+<section id="yayaz" class="section">
+  <h2>Yayaz</h2>
+  <div class="category">
+    <ul>
+
+
+      <li style="color:white;">
+        <img src="fr6.png" alt="Yayaz" style="height:auto; width:100%;">
+        </a>
+        <p></p>
+      </li>
+
+</ul>
+
+
+  <div class="grid">
+    <a href="https://x.com/yayaZFN" target="_blank" class="card">
+      <img src="x.png" alt="X/Twitter" style="height:150px;">
+      <h4 style="color:white;">@yayaZFN</h4>
+      <p style="color:white;">X (Twitter)</p>
+    </a>
+    <a href="https://www.tiktok.com/@yayaz_fn;_r=1" target="_blank" class="card">
+      <img src="tt.png" alt="TikTok" style="height:150px;">
+      <h4 style="color:white;">@yayaz_fn</h4>
+      <p style="color:white;">TikTok</p>
+    </a>
+  </div>
+
+
+  </div>
+</section>
+
+
+
+
+
+
+
+
+<!-- nerzox -->
+
+<section id="nerzox" class="section">
+  <h2>Nerzox</h2>
+  <div class="category">
+    <ul>
+
+
+      <li style="color:white;">
+        <img src="fr4.png" alt="Nerzox" style="height:auto; width:100%;">
+        <p></p>
+      </li>
+
+  <div class="grid">
+
+    <a href="https://x.com/nerzox35?" target="_blank" class="card">
+      <img src="x.png" alt="X/Twitter" style="height:150px;">
+      <h4 style="color:white;">@nerzox35?</h4>
+      <p style="color:white;">X (Twitter)</p>
+    </a>
+
+    <a href="https://www.twitch.tv/nerzox35/" target="_blank" class="card">
+      <img src="twitch.png" alt="Twitch" style="height:150px;">
+      <h4 style="color:white;">@nerzox35</h4>
+      <p style="color:white;">Twitch</p>
+    </a>
+
+  </div>
+
+</ul>
+
+  </div>
+</section>
+
+
+
+
+
+
+
+
+<!-- Moyalis -->
+
+<section id="moyalys" class="section">
+  <h2>Moyalis</h2>
+  <div class="category">
+    <ul>
+
+
+      <li style="color:white;">
+        <img src="fr8.png" alt="Moyalys" style="height:auto; width:100%;">
+        </a>
+        <p></p>
+      </li>
+
+
+
+  <div class="grid">
+
+    <a href="https://x.com/Moyalysftn" target="_blank" class="card">
+      <img src="x.png" alt="X/Twitter" style="height:150px;">
+      <h4 style="color:white;">@Moyalysftn</h4>
+      <p style="color:white;">X (Twitter)</p>
+    </a>
+
+    <a href="https://www.twitch.tv/siinuz" target="_blank" class="card">
+      <img src="twitch.png" alt="Twitch" style="height:150px;">
+      <h4 style="color:white;">@KataktisEsport</h4>
+      <p style="color:white;">Twitch</p>
+    </a>
+
+  </div>
+</ul>
+
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+<!-- Brawl Stars -->
+
+<section id="brawl_stars" class="section">
+  <h2>Brawl Stars</h2>
+  <div class="category">
+    <h3>🏆 Staff</h3>
+    <ul>
+ 
+
+      <li style="color:white;">
+        <a href="https://x.com/" target="_blank">
+        <img src="BS4.png" alt="staff 1" style="height:auto; width:100%;">
+        </a>
+        <p></p>
+      </li>
+      <li style="color:white;">
+        <a href="https://x.com/" target="_blank">
+        <img src="BS5.png" alt="staff 2" style="height:auto; width:100%;">
+        </a>
+        <p></p>
+      </li>
+
+    <h3>🏆 Joueurs Officiels</h3>
+    <ul>
+
+      <li style="color:white;">
+        <a href="https://x.com/" target="_blank">
+        <img src="BS1.png" alt="Joueur 1" style="height:auto; width:100%;">
+        </a>
+        <p></p>
+      </li>
+
+
+      <li style="color:white;">
+        <a href="https://x.com/" target="_blank">
+        <img src="BS2.png" alt="Joueur 2" style="height:auto; width:100%;">
+        </a>
+        <p></p>
+      </li>
+
+
+      <li style="color:white;">
+        <a href="https://x.com/" target="_blank">
+        <img src="BS3.png" alt="Joueur 3" style="height:auto; width:100%;">
+        </a>
+        <p></p>
+      </li>
+
+
+
+
+
+  </ul></ul></div>
+</section>
+
+
+
+
+
+
+
+
 <!-- Réseaux -->
 
 <section id="reseaux" class="section">
   <h2>Nos Réseaux</h2>
   <div class="grid">
-    <a href="https://www.instagram.com/TSUKO_esport/" target="_blank" class="card">
+    <a href="https://www.instagram.com/kataktis_esport/" target="_blank" class="card">
       <img src="insta.png" alt="Instagram" style="height:150px;">
-      <h4 style="color:white;">@TSUKO_esport</h4>
+      <h4 style="color:white;">@kataktis_esport</h4>
       <p style="color:white;">Instagram</p>
     </a>
-    <a href="https://x.com/TSUKOS" target="_blank" class="card">
+    <a href="https://x.com/KataktisS" target="_blank" class="card">
       <img src="x.png" alt="X/Twitter" style="height:150px;">
-      <h4 style="color:white;">@TSUKO eSport</h4>
+      <h4 style="color:white;">@Kataktis eSport</h4>
       <p style="color:white;">X (Twitter)</p>
     </a>
-    <a href="https://www.twitch.tv/TSUKOesport" target="_blank" class="card">
+    <a href="https://www.twitch.tv/kataktisesport" target="_blank" class="card">
       <img src="twitch.png" alt="Twitch" style="height:150px;">
-      <h4 style="color:white;">@TSUKOEsport</h4>
+      <h4 style="color:white;">@KataktisEsport</h4>
       <p style="color:white;">Twitch</p>
     </a>
-    <a href="https://www.youtube.com/@TSUKOe-sport5639" target="_blank" class="card">
+    <a href="https://www.youtube.com/@kataktise-sport5639" target="_blank" class="card">
       <img src="yt.png" alt="YouTube" style="height:150px;">
-      <h4 style="color:white;">@TSUKO E-sport</h4>
+      <h4 style="color:white;">@Kataktis E-sport</h4>
       <p style="color:white;">YouTube</p>
     </a>
     <a href="https://www.tiktok.com/@cryzox.esport?_t=ZN-8zYkXF36bT8&amp;_r=1" target="_blank" class="card">
       <img src="tt.png" alt="TikTok" style="height:150px;">
-      <h4 style="color:white;">@TSUKO.esport</h4>
+      <h4 style="color:white;">@Kataktis.esport</h4>
       <p style="color:white;">TikTok</p>
     </a>
   </div>
@@ -833,36 +998,34 @@ max-height: 600px;
 <section id="effectif" class="section">
 
 
-  <h2>Président</h2>
+  <h2>Présidence</h2>
   <ul>
-    <li>MNZ</li>
-    <li>Enox</li>
+    <li>Wotix </li>
+    <li>Aviary </li>
   </ul>
 
 
-  <h2>Vice-Président</h2>
+  <h2>Co-Président</h2>
   <ul>
-    <li>Xënn</li>
+    <li>BLK</li>
+    <li>Helio</li>
   </ul>
 
-  <h2>Coach</h2>
+  <h2>Equipe Management</h2>
   <ul>
-    <li>HappŸ</li>
+    <li>Nasim (Responsable Brawl Stars)</li>
   </ul>
-
-
 
   <h2>Equipe Audio Visuel</h2>
   <ul>
-    <li>Yassd34 - Web Designer</li>
-    <li>Zayy - Graphiste</li>
-    <li>THM - Monteur</li>
+    <li>Yassd34 - CM</li>
+    <li>Quaved - Graphiste</li>
   </ul>
 
 
   <h2>Modération</h2>
   <ul>
-    <li>ち ᖫᖨ ✞</li>
+    <li>Viking</li>
   </ul>
 
 
@@ -889,7 +1052,7 @@ max-height: 600px;
 
 
   <li style="color:white;">
-    <a href="https://www.chezyokoesport.fr/product/20225058/maillot-tsuko-esport" target="_blank">
+    <a href="https://www.chezyokoesport.fr/product/20328717/maillot-kataktis-esport" target="_blank">
       <img src="actu3.jpg" alt="Joueur 9" style="height:auto; width:100%;">
     </a>
     <p></p>
@@ -924,11 +1087,11 @@ max-height: 600px;
   <h2>Tournois</h2>
   <div class="grid">
     <div class="card">
-      <img src="..." alt="..." style="width:100%; border-radius:8px;">
-      <a href="..." target="_blank">
+      <img src="actu1.jpg" alt="kataktis cup" style="width:100%; border-radius:8px;">
+      <a href="https://wls.ac/tZC7EoYjse" target="_blank">
         </a>
-      <h4>...</h4>
-      <p>...</p>
+      <h4>Kataktis Cup en partenaria avec XEOS</h4>
+      <p>27 Septembre</p>
     </div>
   </div>
 </section>
@@ -947,7 +1110,7 @@ max-height: 600px;
     <form id="recrutement-form" style="max-width: 600px; margin: auto;">
 
       <label for="discord">Pseudo Discord</label>
-      <input id="discord" type="text" name="discord" placeholder="Ex: TSK_Yass" required="">
+      <input id="discord" type="text" name="discord" placeholder="Ex: KTK_Yass" required="">
 
       <label for="pr">PR / Division</label>
       <input id="pr" type="text" name="pr" placeholder="Ex: 1k2 PR, Div 2" required="">
@@ -957,7 +1120,6 @@ max-height: 600px;
 
       <label for="presentation">Présente-toi</label>
       <textarea id="presentation" name="presentation" placeholder="Parle-nous de toi" required=""></textarea>
-
 
       <label for="message">Présente-ton gameplay</label>
       <textarea id="message" name="message" placeholder="rôle, ambition, un duo ?" required=""></textarea>
@@ -1034,7 +1196,7 @@ max-height: 600px;
 <footer>
 
   <img src="logo.png" alt="Logo KTK" style="height:40px;"><br>
-  © 2025 Team TSK – Tous droits réservés.
+  © 2025 Team KTK – Tous droits réservés.
 </footer>
 
 <script>
